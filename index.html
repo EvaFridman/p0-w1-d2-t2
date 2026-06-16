@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Second form</title>
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Регистрация</legend>
+
+                    <fieldset>
+                        <legend>Обязательная информация</legend>
+                        <label for="username">Никнейм</label>
+                        <input 
+                            type="text"
+                            id="username"
+                            name="username"
+                            placeholder="Имя пользователя"
+                            minlength="3"
+                            maxlength="30"
+                            autocomplete="username"
+                            required
+                        />
+                        <hr>
+
+                        <label for="email">Электронная почта</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exaple@gmail.com"
+                            autocomplete="email"
+                            required
+                        />
+                        <hr>
+
+                        <label for="password">Пароль</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Введите пароль"
+                            minlength="7"
+                            autocomplete="new-password"
+                            required
+                        />
+                        <hr>
+
+                        <label for="tarif">Тариф</label>
+                        <select id="tarif" name="tarif">
+                            <option value="" selected>Выберите тариф</option>
+                            <option value="testPeriod">Пробный период</option>
+                            <option value="base">Базовый</option>
+                            <option value="opti">Оптимальный</option>
+                            <option value="profi">Профессиональный</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Дополнительная информация</legend>
+
+                        <label for="birthdate">Дата рождения</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                        <hr>
+
+                        <label for="avatar">Аватар</label>
+                        <input type="file" id="avatar" name="avatar" accept="image/*">
+                        <hr>
+
+                        <label id="about">О себе</label>
+                        <textarea id="about" name="about" rows="4" cols="50" placeholder="Расскажите о себе">
+                        </textarea>
+
+                    </fieldset>
+                </fieldset>
+                
+                <button type="submit">Отправить</button>
+            </form>
+        </main>
+        <footer></footer>
+    </body>
